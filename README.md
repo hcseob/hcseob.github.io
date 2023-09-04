@@ -1,7 +1,7 @@
 # How to use this repo
 1. Create a file 'init.sh' with contents:
-> #!/bin/sh \n
-> source venv/bin/activate \n
+> #!/bin/sh <br>
+> source venv/bin/activate <br>
 > export OPENAI_API_KEY='sk-...'
 
 2. Create a virtual env: `python -m venv venv`
