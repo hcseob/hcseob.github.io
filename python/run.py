@@ -49,7 +49,7 @@ def create_page_text(page_name):
     response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[{"role": "system", "content": 'You are a wikipedia super contributor and write excellent wikipedia pages from scratch. You write these pages using the markdown format.'},
-                          {"role": "user", "content": f"Create a wikipeda page, using markdown language, for the topic {page_name}. Include links to pages that would typically have their own page using markdown links point is files in a directory 'pages'. An example would be to create link for Europe as [Europe](pages/Europe.md)"}
+                          {"role": "user", "content": f"Create a wikipeda page, using markdown language, for the topic {page_name}. Include links to pages that would typically have their own page using markdown links. An example would be to create link for Europe as [Europe](Europe.md)"}
                 ])
     with open(f"pages/{page_name}.md", 'w') as f:
         f.write(response.choices[0].message.content)
