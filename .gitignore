@@ -1,1 +1,1 @@
-venv init.sh
+venv init.sh venv/*
