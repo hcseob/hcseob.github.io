@@ -1,2 +1,2 @@
 # Title
-[link](/page1)
+[link](/pages/philosophy.md)
