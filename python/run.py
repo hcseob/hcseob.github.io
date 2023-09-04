@@ -52,6 +52,7 @@ def create_page_text(page_name):
                           {"role": "user", "content": f"Create a wikipeda page, using markdown language, for the topic {page_name}. Include links to pages that would typically have their own page using markdown links. An example would be to create link for Europe as [Europe](Europe.md)"}
                 ])
     with open(f"pages/{page_name}.md", 'w') as f:
+        f.write(f"---\ntitle: {page_name}\n---\n")
         f.write(response.choices[0].message.content)
 
     # UPDATE THE DICTIONARY
